@@ -465,10 +465,10 @@ html{scroll-behavior:smooth}
 body{background:#040a05;font-family:'DM Sans',sans-serif;color:#dce8d4;overflow-x:hidden;min-height:100vh;cursor:none}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#040a05}::-webkit-scrollbar-thumb{background:#1e4a18;border-radius:3px}
 button,input{font-family:'DM Sans',sans-serif}a{text-decoration:none;color:inherit}
-#cursor-dot{position:fixed;width:6px;height:6px;background:#7ed958;border-radius:50%;pointer-events:none;z-index:10000;transition:background .2s;mix-blend-mode:screen;top:0;left:0;will-change:transform}
-#cursor-ring{position:fixed;width:32px;height:32px;border:1.5px solid rgba(126,217,88,.4);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;top:0;left:0;will-change:transform;transition:width .3s,height .3s,border-color .3s}
-body:has(button:hover) #cursor-ring{width:48px;height:48px;border-color:rgba(126,217,88,.7)}
-body:has(button:hover) #cursor-dot{background:#b0f060}
+#cursor-dot{position:fixed;width:6px;height:6px;background:#3fa820;border-radius:50%;pointer-events:none;z-index:10000;transition:background .2s;mix-blend-mode:screen;top:0;left:0;will-change:transform}
+#cursor-ring{position:fixed;width:32px;height:32px;border:1.5px solid rgba(58,168,40,.4);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;top:0;left:0;will-change:transform;transition:width .3s,height .3s,border-color .3s}
+body:has(button:hover) #cursor-ring{width:48px;height:48px;border-color:rgba(58,168,40,.7)}
+body:has(button:hover) #cursor-dot{background:#4a9c28}
 #bg-svg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.55}
 #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none}
 .noise{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -482,44 +482,46 @@ body:has(button:hover) #cursor-dot{background:#b0f060}
 .alogo{display:flex;align-items:center;gap:9px;margin-bottom:20px}
 .alogo-box{width:38px;height:38px;background:linear-gradient(135deg,#4ab734,#1e6614);border-radius:10px;display:flex;align-items:center;justify-content:center;animation:logoMorph 4s ease-in-out infinite}
 @keyframes logoMorph{0%,100%{border-radius:10px}50%{border-radius:50%;box-shadow:0 0 20px rgba(74,183,52,.35)}}
-.alogo-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;background:linear-gradient(90deg,#a8e078,#5ec440,#a8e078);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
+.alogo-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;background:linear-gradient(90deg,#4a8e22,#2e8a14,#4a8e22);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
 @keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
 .aform-title{font-size:26px;font-weight:700;color:#e8f5e2;margin-bottom:4px}
 .aform-sub{font-size:13px;color:#486844;margin-bottom:16px}
 .artabs{display:flex;gap:4px;margin-bottom:14px;background:#08120a;border:1px solid #162818;border-radius:10px;padding:3px}
 .artab{flex:1;padding:6px 4px;border-radius:7px;border:none;background:transparent;color:#324e34;font-size:11px;font-weight:600;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:4px}
-.artab.on{background:linear-gradient(135deg,rgba(74,183,52,.18),rgba(30,102,20,.12));color:#7ed958;border:1px solid rgba(74,183,52,.22)}
+.artab.on{background:linear-gradient(135deg,rgba(74,183,52,.18),rgba(30,102,20,.12));color:#3fa820;border:1px solid rgba(74,183,52,.22)}
 .ainwrap{position:relative;margin-bottom:10px}
 .ainwrap .ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);pointer-events:none;width:16px;height:16px;color:#2e4a30}
 .ain{width:100%;height:44px;padding:0 14px 0 42px;background:#08120a;border:1.5px solid #162818;border-radius:11px;color:#e8f5e2;font-size:14px;outline:none;transition:all .22s}
 .ain:focus{border-color:#4ab734;background:#0a1a0c;box-shadow:0 0 0 3px rgba(74,183,52,.08)}
 .ain::placeholder{color:#2e4830}
 .arow2{display:flex;gap:10px;margin-bottom:10px}.arow2 .ainwrap{margin-bottom:0;flex:1}
-.aforgot{font-size:12px;color:#2e4830;text-align:right;cursor:pointer;margin:-6px 0 14px;transition:color .18s;display:block}.aforgot:hover{color:#7ed958}
+.aforgot{font-size:12px;color:#2e4830;text-align:right;cursor:pointer;margin:-6px 0 14px;transition:color .18s;display:block}.aforgot:hover{color:#3fa820}
 .abtn{width:100%;height:44px;background:linear-gradient(135deg,#4ab734,#1e6614);color:#fff;border:none;border-radius:11px;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
 .abtn::before{content:'';position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.2),transparent);transform:skewX(-20deg);transition:left .5s}
 .abtn:hover::before{left:130%}.abtn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(74,183,52,.4)}
 .adivider{display:flex;align-items:center;gap:12px;margin:14px 0}.adivline{flex:1;height:1px;background:#111e14}.adivtxt{font-size:11px;color:#243826}
 .agbtn{width:100%;height:44px;background:#08120a;border:1.5px solid #162818;border-radius:11px;color:#6a8e62;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:all .22s}
 .agbtn:hover{border-color:#4ab734;background:#0a1a0c;color:#b8e8b0}
-.aswlink{font-size:12px;color:#2e4830;text-align:center;margin-top:14px}.aswlink b{color:#7ed958;cursor:pointer}.aswlink b:hover{color:#a8f070}
+.aswlink{font-size:12px;color:#2e4830;text-align:center;margin-top:14px}.aswlink b{color:#3fa820;cursor:pointer}.aswlink b:hover{color:#a8f070}
 .achkrow{display:flex;align-items:flex-start;gap:7px;margin:0 0 10px}
 .achkrow input{accent-color:#4ab734;width:15px;height:15px;margin-top:2px;cursor:pointer}
 .achkrow label{font-size:12px;color:#3e5e40;cursor:pointer;line-height:1.5}
 .adeco{position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(160deg,#0b2e12,#082010,#030e05);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 36px;overflow:hidden;transition:transform .72s cubic-bezier(.77,0,.18,1);z-index:30}
+.adeco-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:saturate(1.3) brightness(0.7)}
+.adeco-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(5,18,7,.82),rgba(4,12,5,.75));}
 .adeco.shifted{transform:translateX(-100%)}
 .adot{position:absolute;border-radius:50%;background:#d4a843;animation:adotPulse ease-in-out infinite}
 @keyframes adotPulse{0%,100%{opacity:.08;transform:scale(.7)}50%{opacity:.5;transform:scale(1.2)}}
 .adeco-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;width:100%}
-.adeco-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(74,183,52,.08);border:1px solid rgba(74,183,52,.2);border-radius:30px;padding:7px 16px;margin-bottom:20px;font-size:12px;color:#7ed958;font-weight:600}
+.adeco-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(74,183,52,.08);border:1px solid rgba(74,183,52,.2);border-radius:30px;padding:7px 16px;margin-bottom:20px;font-size:12px;color:#3fa820;font-weight:600}
 .adeco-title{font-family:'Cormorant Garamond',serif;font-size:36px;color:#e8f5e2;text-align:center;line-height:1.12;margin-bottom:12px}
 .adeco-sub{font-size:13px;color:#4a7a4a;text-align:center;line-height:1.7;max-width:240px;margin-bottom:24px}
-.adeco-ghost{padding:12px 30px;background:transparent;border:1.5px solid rgba(126,217,88,.4);border-radius:11px;color:#7ed958;font-size:14px;font-weight:600;cursor:pointer;transition:all .24s}
-.adeco-ghost:hover{background:rgba(74,183,52,.12);border-color:#7ed958;transform:translateY(-1px)}
+.adeco-ghost{padding:12px 30px;background:transparent;border:1.5px solid rgba(58,168,40,.4);border-radius:11px;color:#3fa820;font-size:14px;font-weight:600;cursor:pointer;transition:all .24s}
+.adeco-ghost:hover{background:rgba(74,183,52,.12);border-color:#3fa820;transform:translateY(-1px)}
 .astrow{display:flex;gap:10px;margin-top:22px;width:100%}
 .astcell{flex:1;background:rgba(255,255,255,.025);border:1px solid rgba(74,183,52,.1);border-radius:10px;padding:10px 6px;text-align:center;transition:all .3s}
 .astcell:hover{border-color:rgba(74,183,52,.3);transform:translateY(-2px)}
-.astval{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#7ed958}
+.astval{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#3fa820}
 .astlbl{font-size:9px;color:#2e4830;margin-top:2px;text-transform:uppercase;letter-spacing:.6px}
 .asuccess{position:absolute;inset:0;background:rgba(4,10,5,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:200;animation:fadeIn .38s ease}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -535,17 +537,17 @@ body:has(button:hover) #cursor-dot{background:#b0f060}
 nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(4,10,5,.85);backdrop-filter:blur(24px);border-bottom:1px solid rgba(74,183,52,.07)}
 .logo{display:flex;align-items:center;gap:9px;cursor:pointer}
 .logo-box{width:34px;height:34px;background:linear-gradient(135deg,#4ab734,#1a5210);border-radius:9px;display:flex;align-items:center;justify-content:center;animation:logoMorph 4s ease-in-out infinite}
-.logo-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;background:linear-gradient(90deg,#a8e078,#5ec440,#a8e078);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;background:linear-gradient(90deg,#4a8e22,#2e8a14,#4a8e22);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 3.5s linear infinite}
 .nav-badge{font-size:10px;color:#4ab734;background:rgba(74,183,52,.08);padding:2px 8px;border-radius:20px;border:1px solid rgba(74,183,52,.18);font-weight:600}
 .navlinks{display:flex;gap:2px}
 .nl{padding:7px 12px;border-radius:7px;font-size:13px;font-weight:500;color:#5a8050;cursor:pointer;border:none;background:transparent;display:flex;align-items:center;gap:5px;transition:color .25s,background .25s}
-.nl:hover,.nl.on{color:#7ed958;background:rgba(74,183,52,.07)}
+.nl:hover,.nl.on{color:#3fa820;background:rgba(74,183,52,.07)}
 .navr{display:flex;align-items:center;gap:9px}
 .wpill{display:flex;align-items:center;gap:6px;background:#07120a;border:1px solid rgba(74,183,52,.12);border-radius:8px;padding:6px 12px;cursor:pointer;transition:all .22s}
 .wpill:hover{border-color:rgba(74,183,52,.3)}
 .wdot{width:6px;height:6px;background:#4ab734;border-radius:50%;animation:dotpulse 2s ease-in-out infinite}
 @keyframes dotpulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.7);opacity:.4}}
-.wa{font-size:12px;color:#5a7a50}.wb{font-size:12px;color:#7ed958;font-weight:600;font-family:'JetBrains Mono',monospace}
+.wa{font-size:12px;color:#5a7a50}.wb{font-size:12px;color:#3fa820;font-weight:600;font-family:'JetBrains Mono',monospace}
 .btnP{background:linear-gradient(135deg,#4ab734,#1e6614);color:#fff;border:none;padding:8px 16px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .22s}
 .btnP:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,183,52,.35)}
 .btnO{background:transparent;color:#5a7a50;border:1px solid rgba(74,183,52,.18);padding:7px 14px;border-radius:8px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .22s}
@@ -567,13 +569,13 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 .hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(74,183,52,.06);border:1px solid rgba(74,183,52,.18);border-radius:30px;padding:8px 20px;margin-bottom:22px;font-size:12px;color:#5ab840;font-weight:500}
 .chip-dot{width:6px;height:6px;background:#4ab734;border-radius:50%;animation:dotpulse 2s infinite}
 .hero-h{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,7vw,88px);line-height:1.0;margin-bottom:20px;display:flex;flex-direction:column;gap:4px}
-.gtext{background:linear-gradient(135deg,#7ed958,#4ab734,#a8e060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gtext{background:linear-gradient(135deg,#3fa820,#4ab734,#4a8e22);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-p{font-size:16px;color:#4a6a44;max-width:580px;line-height:1.75;margin-bottom:36px}
 .hbtns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
 .hbp{background:linear-gradient(135deg,#4ab734,#1e6614);color:#fff;border:none;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s;display:flex;align-items:center;gap:8px}
 .hbp:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(74,183,52,.4)}
-.hbo{background:transparent;color:#7ed958;border:1.5px solid rgba(126,217,88,.35);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .25s}
-.hbo:hover{background:rgba(74,183,52,.08);border-color:#7ed958;transform:translateY(-2px)}
+.hbo{background:transparent;color:#3fa820;border:1.5px solid rgba(58,168,40,.35);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px;transition:all .25s}
+.hbo:hover{background:rgba(74,183,52,.08);border-color:#3fa820;transform:translateY(-2px)}
 .hnote{font-size:12px;color:#2e4a28}
 .sec{padding:0 28px 64px;max-width:1100px;margin:0 auto;position:relative;z-index:5}
 .sec-head{text-align:center;margin-bottom:46px}
@@ -581,17 +583,17 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 .sec-sub{font-size:14px;color:#3a5a34;margin-top:8px}
 .card{background:#08140a;border:1px solid rgba(255,255,255,.04);border-radius:16px}
 .tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
-.tag-g{background:rgba(74,183,52,.12);color:#7ed958;border:1px solid rgba(74,183,52,.25)}
+.tag-g{background:rgba(74,183,52,.12);color:#3fa820;border:1px solid rgba(74,183,52,.25)}
 .tag-a{background:rgba(255,180,50,.1);color:#f5b942;border:1px solid rgba(255,180,50,.2)}
 .tag-b{background:rgba(80,160,255,.1);color:#70b8ff;border:1px solid rgba(80,160,255,.2)}
-.vbadge{display:inline-flex;align-items:center;gap:4px;background:rgba(74,183,52,.1);color:#7ed958;border:1px solid rgba(74,183,52,.22);border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700}
+.vbadge{display:inline-flex;align-items:center;gap:4px;background:rgba(74,183,52,.1);color:#3fa820;border:1px solid rgba(74,183,52,.22);border-radius:20px;padding:3px 9px;font-size:11px;font-weight:700}
 .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .sc{background:#08140a;border:1px solid rgba(255,255,255,.04);border-radius:18px;padding:28px 24px;text-align:center;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.34,1.3,.64,1);cursor:default}
 .sc:hover{transform:translateY(-6px)}
 .sc-icon{margin-bottom:12px;display:flex;justify-content:center}
 .scv{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;margin-bottom:6px}
 .scl{font-size:13px;color:#c8dcc0;font-weight:500;margin-bottom:4px}.scd{font-size:11px;color:#2e4830}
-.sc.s1{color:#7ed958}.sc.s2{color:#70b8ff}.sc.s3{color:#f5b942}.sc.s4{color:#a8c9a0}
+.sc.s1{color:#3fa820}.sc.s2{color:#70b8ff}.sc.s3{color:#f5b942}.sc.s4{color:#a8c9a0}
 .chain-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
 .cf-step{display:flex;flex-direction:column;align-items:center;gap:10px}
 .cf-node{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#0d2e12,#081808);border:1.5px solid rgba(74,183,52,.18);display:flex;align-items:center;justify-content:center;transition:all .3s}
@@ -607,7 +609,7 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 .fc:hover{border-color:rgba(74,183,52,.15);transform:translateY(-3px)}
 .fc-icon{flex-shrink:0;margin-top:2px}
 .fc-title{font-size:15px;font-weight:700;color:#c0d8b8;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.fc-tag{font-size:10px;background:rgba(74,183,52,.1);color:#7ed958;border:1px solid rgba(74,183,52,.2);border-radius:4px;padding:2px 7px;font-weight:600}
+.fc-tag{font-size:10px;background:rgba(74,183,52,.1);color:#3fa820;border:1px solid rgba(74,183,52,.2);border-radius:4px;padding:2px 7px;font-weight:600}
 .fc-desc{font-size:13px;color:#3a5634;line-height:1.75}
 .faq-item{background:#07120a;border:1px solid rgba(255,255,255,.04);border-radius:12px;padding:18px 20px;margin-bottom:9px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
 .faq-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#4ab734,transparent);transform:scaleY(0);transform-origin:top;transition:transform .4s}
@@ -631,7 +633,7 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 .mono{font-family:'JetBrains Mono',monospace;font-size:12px;color:#5ab840}
 .dact{font-size:12px;color:#4ab734;cursor:pointer;padding:4px 8px;border-radius:5px;border:1px solid transparent;transition:all .2s;display:inline-flex;align-items:center;gap:4px}
 .dact:hover{border-color:rgba(74,183,52,.3);background:rgba(74,183,52,.07)}
-.pbar{height:6px;background:#0c1e0e;border-radius:3px;overflow:hidden}.pfill{height:100%;background:linear-gradient(90deg,#4ab734,#7ed958);border-radius:3px}
+.pbar{height:6px;background:#0c1e0e;border-radius:3px;overflow:hidden}.pfill{height:100%;background:linear-gradient(90deg,#4ab734,#3fa820);border-radius:3px}
 .search-bar{display:flex;align-items:center;background:#07120a;border:1.5px solid #162018;border-radius:12px;padding:12px 18px;gap:10px;transition:border-color .2s;flex:1}
 .search-bar:focus-within{border-color:#4ab734;box-shadow:0 0 0 3px rgba(74,183,52,.07)}
 .search-bar input{flex:1;background:none;border:none;outline:none;color:#e0ecda;font-size:14px;font-family:'JetBrains Mono',monospace}
@@ -644,18 +646,18 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 .step-card.done:hover{border-color:rgba(74,183,52,.25)}.step-card.pending{opacity:.55}
 .filter-btns{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;align-items:center}
 .fbtn{padding:7px 16px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;transition:all .22s;border:1.5px solid rgba(74,183,52,.12);color:#4a6a44;background:transparent}
-.fbtn:hover{border-color:rgba(74,183,52,.3);color:#7ed958}.fbtn.on{background:rgba(74,183,52,.12);border-color:#4ab734;color:#7ed958}
+.fbtn:hover{border-color:rgba(74,183,52,.3);color:#3fa820}.fbtn.on{background:rgba(74,183,52,.12);border-color:#4ab734;color:#3fa820}
 .mlist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .mcard{background:#07120a;border:1px solid rgba(255,255,255,.04);border-radius:16px;padding:24px;transition:all .3s cubic-bezier(.34,1.3,.64,1)}
 .mcard:hover{border-color:rgba(74,183,52,.22);transform:translateY(-4px);box-shadow:0 18px 48px rgba(0,0,0,.5)}
-.mcard-price{font-size:21px;font-weight:700;color:#7ed958;font-family:'Cormorant Garamond',serif}
+.mcard-price{font-size:21px;font-weight:700;color:#3fa820;font-family:'Cormorant Garamond',serif}
 .gov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
 .gov-kpi{text-align:center;background:#07120a;border:1px solid rgba(255,255,255,.04);border-radius:14px;padding:20px;transition:all .3s}
 .gov-kpi:hover{border-color:rgba(74,183,52,.2);transform:translateY(-3px)}
 .prop-card{background:#07120a;border:1px solid rgba(255,255,255,.04);border-radius:14px;padding:24px;margin-bottom:14px;transition:all .3s}
 .prop-card:hover{border-color:rgba(74,183,52,.16)}
 .vote-bar{height:9px;border-radius:5px;background:#0c1e0e;overflow:hidden;margin-bottom:8px}
-.vote-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,#4ab734,#7ed958)}
+.vote-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,#4ab734,#3fa820)}
 #toast-wrap{position:fixed;top:80px;right:24px;z-index:9999;pointer-events:none}
 .toast-item{display:flex;align-items:center;gap:10px;background:#0a1e0c;border:1px solid rgba(74,183,52,.3);border-radius:12px;padding:12px 18px;margin-bottom:9px;font-size:13px;color:#a8c4a0;box-shadow:0 8px 32px rgba(0,0,0,.6);pointer-events:all;animation:toastIn .4s cubic-bezier(.34,1.56,.64,1) both;min-width:220px}
 @keyframes toastIn{from{opacity:0;transform:translateX(60px) scale(.9)}to{opacity:1;transform:translateX(0) scale(1)}}
@@ -954,7 +956,7 @@ export default function App() {
           zIndex: 10000,
           width: "6px",
           height: "6px",
-          background: "#7ed958",
+          background: "#3fa820",
           borderRadius: "50%",
           mixBlendMode: "screen",
         }}
@@ -970,7 +972,7 @@ export default function App() {
           zIndex: 9999,
           width: "32px",
           height: "32px",
-          border: "1.5px solid rgba(126,217,88,.4)",
+          border: "1.5px solid rgba(58,168,40,.4)",
           borderRadius: "50%",
           mixBlendMode: "screen",
         }}
@@ -984,14 +986,20 @@ export default function App() {
       >
         <defs>
           <radialGradient id="rg1" cx="20%" cy="30%">
-            <stop offset="0%" stopColor="#1a4a12" stopOpacity=".18" />
+            <stop offset="0%" stopColor="#1a4a12" stopOpacity=".22" />
             <stop offset="100%" stopColor="transparent" />
           </radialGradient>
           <radialGradient id="rg2" cx="80%" cy="70%">
-            <stop offset="0%" stopColor="#0a3a08" stopOpacity=".15" />
+            <stop offset="0%" stopColor="#0a3a08" stopOpacity=".18" />
+            <stop offset="100%" stopColor="transparent" />
+          </radialGradient>
+          <radialGradient id="rg3" cx="60%" cy="10%">
+            <stop offset="0%" stopColor="#0d2e08" stopOpacity=".14" />
             <stop offset="100%" stopColor="transparent" />
           </radialGradient>
         </defs>
+
+        {/* glow blobs */}
         <ellipse cx="200" cy="250" rx="300" ry="300" fill="url(#rg1)">
           <animate
             attributeName="cx"
@@ -1008,11 +1016,303 @@ export default function App() {
             repeatCount="indefinite"
           />
         </ellipse>
-        <g opacity=".04" stroke="#4ab734" strokeWidth=".5">
+        <ellipse cx="900" cy="100" rx="220" ry="220" fill="url(#rg3)">
+          <animate
+            attributeName="cy"
+            values="100;160;100"
+            dur="14s"
+            repeatCount="indefinite"
+          />
+        </ellipse>
+
+        {/* subtle grid */}
+        <g opacity=".03" stroke="#4ab734" strokeWidth=".5">
           <line x1="0" y1="0" x2="1440" y2="900" opacity=".5" />
           <line x1="1440" y1="0" x2="0" y2="900" opacity=".5" />
           <line x1="720" y1="0" x2="720" y2="900" />
           <line x1="0" y1="450" x2="1440" y2="450" />
+        </g>
+
+        {/* ── WHEAT STALKS – left cluster ── */}
+        <g
+          opacity=".13"
+          stroke="#4ab734"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          fill="none"
+        >
+          {/* stalk 1 */}
+          <line x1="60" y1="900" x2="70" y2="650" />
+          <line x1="70" y1="720" x2="55" y2="700" />
+          <line x1="70" y1="700" x2="85" y2="680" />
+          <line x1="70" y1="680" x2="56" y2="662" />
+          <line x1="70" y1="660" x2="84" y2="644" />
+          {/* grain head */}
+          <ellipse
+            cx="70"
+            cy="635"
+            rx="5"
+            ry="12"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+          <line x1="70" y1="623" x2="63" y2="610" />
+          <line x1="70" y1="623" x2="77" y2="610" />
+          <line x1="70" y1="635" x2="62" y2="620" />
+          <line x1="70" y1="635" x2="78" y2="620" />
+          {/* stalk 2 */}
+          <line x1="90" y1="900" x2="100" y2="680" />
+          <line x1="100" y1="750" x2="86" y2="730" />
+          <line x1="100" y1="720" x2="114" y2="700" />
+          <line x1="100" y1="700" x2="87" y2="683" />
+          <ellipse
+            cx="100"
+            cy="665"
+            rx="5"
+            ry="11"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+          <line x1="100" y1="654" x2="93" y2="641" />
+          <line x1="100" y1="654" x2="107" y2="641" />
+          {/* stalk 3 */}
+          <line x1="120" y1="900" x2="130" y2="700" />
+          <line x1="130" y1="760" x2="117" y2="742" />
+          <line x1="130" y1="730" x2="143" y2="712" />
+          <ellipse
+            cx="130"
+            cy="685"
+            rx="5"
+            ry="12"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+          <line x1="130" y1="673" x2="123" y2="660" />
+          <line x1="130" y1="673" x2="137" y2="660" />
+          {/* stalk 4 - smaller offset */}
+          <line x1="40" y1="900" x2="48" y2="710" />
+          <line x1="48" y1="780" x2="36" y2="762" />
+          <line x1="48" y1="750" x2="60" y2="733" />
+          <ellipse
+            cx="48"
+            cy="696"
+            rx="4"
+            ry="10"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+        </g>
+
+        {/* ── WHEAT STALKS – right cluster ── */}
+        <g
+          opacity=".13"
+          stroke="#4ab734"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          fill="none"
+        >
+          <line x1="1380" y1="900" x2="1370" y2="650" />
+          <line x1="1370" y1="720" x2="1385" y2="700" />
+          <line x1="1370" y1="700" x2="1356" y2="680" />
+          <line x1="1370" y1="680" x2="1384" y2="662" />
+          <ellipse
+            cx="1370"
+            cy="635"
+            rx="5"
+            ry="12"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+          <line x1="1370" y1="623" x2="1363" y2="610" />
+          <line x1="1370" y1="623" x2="1377" y2="610" />
+          <line x1="1350" y1="900" x2="1340" y2="680" />
+          <line x1="1340" y1="750" x2="1354" y2="730" />
+          <line x1="1340" y1="720" x2="1326" y2="700" />
+          <ellipse
+            cx="1340"
+            cy="665"
+            rx="5"
+            ry="11"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+          <line x1="1320" y1="900" x2="1310" y2="700" />
+          <line x1="1310" y1="760" x2="1323" y2="742" />
+          <line x1="1310" y1="730" x2="1297" y2="712" />
+          <ellipse
+            cx="1310"
+            cy="685"
+            rx="5"
+            ry="12"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+          <line x1="1400" y1="900" x2="1392" y2="710" />
+          <line x1="1392" y1="780" x2="1404" y2="762" />
+          <ellipse
+            cx="1392"
+            cy="696"
+            rx="4"
+            ry="10"
+            fill="#2a6614"
+            stroke="none"
+            opacity=".5"
+          />
+        </g>
+
+        {/* ── LARGE LEAF – top left ── */}
+        <g opacity=".09" fill="#2d7a16" stroke="#3a9a1a" strokeWidth=".8">
+          <path d="M0,180 Q60,80 160,120 Q80,200 0,180Z" />
+          <line
+            x1="0"
+            y1="180"
+            x2="140"
+            y2="110"
+            stroke="#3a9a1a"
+            strokeWidth=".6"
+          />
+          <path
+            d="M20,160 Q30,130 60,120"
+            stroke="#3a9a1a"
+            strokeWidth=".5"
+            fill="none"
+          />
+          <path
+            d="M40,155 Q55,125 80,118"
+            stroke="#3a9a1a"
+            strokeWidth=".5"
+            fill="none"
+          />
+          <path
+            d="M60,145 Q75,120 100,115"
+            stroke="#3a9a1a"
+            strokeWidth=".5"
+            fill="none"
+          />
+        </g>
+
+        {/* ── LARGE LEAF – bottom right ── */}
+        <g opacity=".09" fill="#2d7a16" stroke="#3a9a1a" strokeWidth=".8">
+          <path d="M1440,750 Q1380,660 1260,700 Q1340,790 1440,750Z" />
+          <line
+            x1="1440"
+            y1="750"
+            x2="1275"
+            y2="695"
+            stroke="#3a9a1a"
+            strokeWidth=".6"
+          />
+          <path
+            d="M1420,730 Q1400,700 1370,690"
+            stroke="#3a9a1a"
+            strokeWidth=".5"
+            fill="none"
+          />
+          <path
+            d="M1395,735 Q1370,705 1340,695"
+            stroke="#3a9a1a"
+            strokeWidth=".5"
+            fill="none"
+          />
+        </g>
+
+        {/* ── CORN / MAIZE silhouette – far left ── */}
+        <g
+          opacity=".08"
+          stroke="#3a8a18"
+          strokeWidth="1"
+          fill="none"
+          strokeLinecap="round"
+        >
+          <line x1="20" y1="900" x2="20" y2="420" />
+          {/* large corn leaves */}
+          <path
+            d="M20,800 Q-30,760 -10,720 Q30,750 20,800Z"
+            fill="#1e5a0a"
+            stroke="none"
+            opacity=".6"
+          />
+          <path
+            d="M20,700 Q80,650 60,600 Q20,650 20,700Z"
+            fill="#1e5a0a"
+            stroke="none"
+            opacity=".6"
+          />
+          <path
+            d="M20,600 Q-20,560 -5,520 Q25,555 20,600Z"
+            fill="#1e5a0a"
+            stroke="none"
+            opacity=".6"
+          />
+          {/* cob */}
+          <rect
+            x="14"
+            y="440"
+            width="12"
+            height="32"
+            rx="6"
+            fill="#3a7a10"
+            opacity=".5"
+          />
+          {/* silk */}
+          <line x1="20" y1="440" x2="14" y2="420" />
+          <line x1="20" y1="440" x2="20" y2="418" />
+          <line x1="20" y1="440" x2="26" y2="420" />
+        </g>
+
+        {/* ── CORN – far right ── */}
+        <g
+          opacity=".08"
+          stroke="#3a8a18"
+          strokeWidth="1"
+          fill="none"
+          strokeLinecap="round"
+        >
+          <line x1="1430" y1="900" x2="1430" y2="380" />
+          <path
+            d="M1430,800 Q1480,760 1460,720 Q1420,750 1430,800Z"
+            fill="#1e5a0a"
+            stroke="none"
+            opacity=".6"
+          />
+          <path
+            d="M1430,700 Q1370,650 1390,600 Q1430,650 1430,700Z"
+            fill="#1e5a0a"
+            stroke="none"
+            opacity=".6"
+          />
+          <path
+            d="M1430,580 Q1470,540 1455,500 Q1425,535 1430,580Z"
+            fill="#1e5a0a"
+            stroke="none"
+            opacity=".6"
+          />
+          <rect
+            x="1424"
+            y="400"
+            width="12"
+            height="32"
+            rx="6"
+            fill="#3a7a10"
+            opacity=".5"
+          />
+          <line x1="1430" y1="400" x2="1424" y2="380" />
+          <line x1="1430" y1="400" x2="1430" y2="378" />
+          <line x1="1430" y1="400" x2="1436" y2="380" />
+        </g>
+
+        {/* ── small scatter leaves ── */}
+        <g opacity=".06" fill="#2d7a16">
+          <path d="M280,30 Q310,0 360,20 Q320,55 280,30Z" />
+          <path d="M1100,870 Q1140,840 1180,860 Q1145,895 1100,870Z" />
+          <path d="M700,10 Q730,-10 770,8 Q738,42 700,10Z" />
         </g>
       </svg>
       <canvas id="bg-canvas" ref={canvasRef} />
@@ -1182,11 +1482,11 @@ export default function App() {
                       <input type="checkbox" id="terms" />
                       <label htmlFor="terms">
                         I agree to the{" "}
-                        <a href="#" style={{ color: "#7ed958" }}>
+                        <a href="#" style={{ color: "#3fa820" }}>
                           Terms
                         </a>{" "}
                         and{" "}
-                        <a href="#" style={{ color: "#7ed958" }}>
+                        <a href="#" style={{ color: "#3fa820" }}>
                           Privacy Policy
                         </a>
                       </label>
@@ -1203,6 +1503,12 @@ export default function App() {
               </div>
             </div>
             <div className={"adeco" + (isSignup ? " shifted" : "")}>
+              <img
+                className="adeco-img"
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&auto=format&fit=crop"
+                alt="Agricultural field"
+              />
+              <div className="adeco-overlay" />
               {[
                 [4, 4, "15%", "20%", "2.2s"],
                 [3, 3, "35%", "60%", "3s"],
@@ -1370,7 +1676,37 @@ export default function App() {
           <div className={"view" + (view === "home" ? " active" : "")}>
             <section className="hero">
               <div className="hero-glow" />
-              <div className="hero-bg-lines">
+              {/* Farm field image strip behind hero */}
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  overflow: "hidden",
+                  zIndex: 0,
+                  pointerEvents: "none",
+                }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=70&auto=format&fit=crop"
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    opacity: 0.07,
+                    filter: "saturate(1.2) brightness(.7)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "linear-gradient(180deg,rgba(4,10,5,.0) 0%,rgba(4,10,5,.85) 100%)",
+                  }}
+                />
+              </div>
+              <div className="hero-bg-lines" style={{ opacity: 0.035 }}>
                 <svg
                   width="100%"
                   height="100%"
@@ -1395,20 +1731,67 @@ export default function App() {
                   <rect width="100%" height="100%" fill="url(#grid)" />
                 </svg>
               </div>
-              <div className="hero-chip">
+              {/* Agriculture identity row */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginBottom: "18px",
+                  background: "rgba(10,30,10,.6)",
+                  border: "1px solid rgba(58,168,40,.2)",
+                  borderRadius: "40px",
+                  padding: "8px 20px",
+                  position: "relative",
+                  zIndex: 2,
+                }}
+              >
+                <span style={{ fontSize: "18px" }}>🌾</span>
+                <span
+                  style={{
+                    fontSize: "11px",
+                    color: "#3fa820",
+                    fontWeight: 600,
+                    letterSpacing: ".6px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Blockchain Agriculture Platform
+                </span>
+                <span
+                  style={{
+                    width: "1px",
+                    height: "14px",
+                    background: "rgba(58,168,40,.25)",
+                  }}
+                />
+                <span style={{ fontSize: "11px", color: "#2a6e14" }}>
+                  Crop Tracking · Smart Contracts · DeFi
+                </span>
+              </div>
+              <div
+                className="hero-chip"
+                style={{ position: "relative", zIndex: 2 }}
+              >
                 <div className="chip-dot" />
                 Built on Base Blockchain · NFTs &amp; Smart Contracts
               </div>
-              <h1 className="hero-h">
+              <h1
+                className="hero-h"
+                style={{ position: "relative", zIndex: 2 }}
+              >
                 <span className="gtext">Farm to Shelf,</span>
                 <span style={{ color: "#e8f5e2" }}>Every Step Verified.</span>
               </h1>
-              <p className="hero-p">
+              <p className="hero-p" style={{ position: "relative", zIndex: 2 }}>
                 The first blockchain-powered crop tracking platform where every
                 handoff is signed, every certification is immutable, and every
                 payment is trustless.
               </p>
-              <div className="hbtns">
+              <div
+                className="hbtns"
+                style={{ position: "relative", zIndex: 2 }}
+              >
                 <button className="hbp" onClick={() => showView("dashboard")}>
                   <Icon.LayoutDashboard width="16" height="16" />
                   Launch Dashboard
@@ -1418,7 +1801,61 @@ export default function App() {
                   Scan QR Code
                 </button>
               </div>
-              <div className="hnote">No wallet needed to verify a product</div>
+              <div
+                className="hnote"
+                style={{ position: "relative", zIndex: 2 }}
+              >
+                No wallet needed to verify a product
+              </div>
+              {/* crop photo strip */}
+              <div
+                style={{
+                  display: "flex",
+                  gap: "10px",
+                  marginTop: "36px",
+                  position: "relative",
+                  zIndex: 2,
+                  maxWidth: "680px",
+                  width: "100%",
+                }}
+              >
+                {[
+                  [
+                    "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=260&q=70&auto=format&fit=crop",
+                    "Wheat harvest",
+                  ],
+                  [
+                    "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=260&q=70&auto=format&fit=crop",
+                    "Coffee berries",
+                  ],
+                  [
+                    "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=260&q=70&auto=format&fit=crop",
+                    "Fresh produce",
+                  ],
+                ].map(([src, alt], i) => (
+                  <div
+                    key={i}
+                    style={{
+                      flex: 1,
+                      borderRadius: "12px",
+                      overflow: "hidden",
+                      height: "80px",
+                      border: "1px solid rgba(58,168,40,.15)",
+                    }}
+                  >
+                    <img
+                      src={src}
+                      alt={alt}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        filter: "brightness(.65) saturate(1.1)",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
             </section>
 
             <div className="sec">
@@ -1690,12 +2127,12 @@ export default function App() {
                     >
                       0x4A2...F8c
                     </span>{" "}
-                    · <span style={{ color: "#7ed958" }}>Verified ✓</span>
+                    · <span style={{ color: "#3fa820" }}>Verified ✓</span>
                   </p>
                 </div>
                 <div style={{ display: "flex", gap: "12px" }}>
                   {[
-                    { val: agtVal, lbl: "AGT Balance", c: "#7ed958" },
+                    { val: agtVal, lbl: "AGT Balance", c: "#3fa820" },
                     { val: "4.9★", lbl: "Quality Rating", c: "#dce8d4" },
                   ].map((k) => (
                     <div
@@ -1738,7 +2175,7 @@ export default function App() {
                     val: "7",
                     lbl: "Active Batches",
                     sub: "3 in transit",
-                    c: "#7ed958",
+                    c: "#3fa820",
                   },
                   {
                     val: "142",
@@ -1891,7 +2328,7 @@ export default function App() {
                         <span
                           style={{
                             fontSize: "12px",
-                            color: "#7ed958",
+                            color: "#3fa820",
                             fontWeight: 600,
                           }}
                         >
@@ -1949,7 +2386,7 @@ export default function App() {
                           style={{
                             fontSize: "13px",
                             fontWeight: 700,
-                            color: "#7ed958",
+                            color: "#3fa820",
                           }}
                         >
                           {r.agt}
@@ -1972,7 +2409,7 @@ export default function App() {
                       <Icon.Award
                         width="16"
                         height="16"
-                        style={{ color: "#7ed958" }}
+                        style={{ color: "#3fa820" }}
                       />{" "}
                       Certifications
                     </h3>
@@ -2627,7 +3064,7 @@ export default function App() {
                         fontFamily: "'Cormorant Garamond',serif",
                         fontSize: "26px",
                         fontWeight: 700,
-                        color: "#7ed958",
+                        color: "#3fa820",
                         marginBottom: "4px",
                       }}
                     >
@@ -2770,7 +3207,7 @@ export default function App() {
                   ) : (
                     <div
                       style={{
-                        color: "#7ed958",
+                        color: "#3fa820",
                         fontSize: "13px",
                         fontWeight: 500,
                         marginTop: "12px",
