@@ -1,8 +1,15 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  type SVGProps,
+  type ReactElement,
+} from "react";
 
 /* ─── SVG ICON COMPONENTS ─── */
 const Icon = {
-  Leaf: (p) => (
+  Leaf: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -16,7 +23,7 @@ const Icon = {
       <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
     </svg>
   ),
-  Mail: (p) => (
+  Mail: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -30,7 +37,7 @@ const Icon = {
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
   ),
-  Lock: (p) => (
+  Lock: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -44,7 +51,7 @@ const Icon = {
       <path d="M7 11V7a5 5 0 0 1 10 0v4" />
     </svg>
   ),
-  User: (p) => (
+  User: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -58,7 +65,7 @@ const Icon = {
       <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
     </svg>
   ),
-  Check: (p) => (
+  Check: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -71,7 +78,7 @@ const Icon = {
       <polyline points="20 6 9 17 4 12" />
     </svg>
   ),
-  ChevronRight: (p) => (
+  ChevronRight: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -84,7 +91,7 @@ const Icon = {
       <path d="m9 18 6-6-6-6" />
     </svg>
   ),
-  Search: (p) => (
+  Search: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -98,7 +105,7 @@ const Icon = {
       <path d="m21 21-4.35-4.35" />
     </svg>
   ),
-  Camera: (p) => (
+  Camera: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -112,7 +119,7 @@ const Icon = {
       <circle cx="12" cy="13" r="3" />
     </svg>
   ),
-  Wallet: (p) => (
+  Wallet: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -127,7 +134,7 @@ const Icon = {
       <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
     </svg>
   ),
-  LogOut: (p) => (
+  LogOut: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -142,7 +149,7 @@ const Icon = {
       <line x1="21" y1="12" x2="9" y2="12" />
     </svg>
   ),
-  Plus: (p) => (
+  Plus: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -156,7 +163,7 @@ const Icon = {
       <line x1="5" y1="12" x2="19" y2="12" />
     </svg>
   ),
-  Home: (p) => (
+  Home: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -170,7 +177,7 @@ const Icon = {
       <polyline points="9 22 9 12 15 12 15 22" />
     </svg>
   ),
-  LayoutDashboard: (p) => (
+  LayoutDashboard: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -186,7 +193,7 @@ const Icon = {
       <rect x="3" y="14" width="7" height="7" />
     </svg>
   ),
-  ScanLine: (p) => (
+  ScanLine: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -203,7 +210,7 @@ const Icon = {
       <line x1="7" y1="12" x2="17" y2="12" />
     </svg>
   ),
-  ShoppingCart: (p) => (
+  ShoppingCart: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -218,7 +225,7 @@ const Icon = {
       <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
     </svg>
   ),
-  Vote: (p) => (
+  Vote: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -233,7 +240,7 @@ const Icon = {
       <path d="M22 19H2" />
     </svg>
   ),
-  Package: (p) => (
+  Package: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -249,7 +256,7 @@ const Icon = {
       <line x1="12" y1="22.08" x2="12" y2="12" />
     </svg>
   ),
-  Truck: (p) => (
+  Truck: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -265,7 +272,7 @@ const Icon = {
       <circle cx="18.5" cy="18.5" r="2.5" />
     </svg>
   ),
-  Shield: (p) => (
+  Shield: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -278,7 +285,7 @@ const Icon = {
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     </svg>
   ),
-  Award: (p) => (
+  Award: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -292,7 +299,7 @@ const Icon = {
       <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
     </svg>
   ),
-  Coins: (p) => (
+  Coins: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -308,7 +315,7 @@ const Icon = {
       <path d="m16.71 13.88.7.71-2.82 2.82" />
     </svg>
   ),
-  ArrowUpRight: (p) => (
+  ArrowUpRight: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -322,12 +329,12 @@ const Icon = {
       <path d="M7 7h10v10" />
     </svg>
   ),
-  Star: (p) => (
+  Star: (p: SVGProps<SVGSVGElement>) => (
     <svg {...p} viewBox="0 0 24 24" fill="currentColor" stroke="none">
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
     </svg>
   ),
-  Sprout: (p) => (
+  Sprout: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -343,7 +350,7 @@ const Icon = {
       <path d="M14.1 6a7 7 0 0 1 1.1 7.5c-1.4.6-2.9.8-4.4.7-.8-2.6-.1-5.4 1.6-6.8.7-.5 1.1-.9 1.7-1.4z" />
     </svg>
   ),
-  ClipboardList: (p) => (
+  ClipboardList: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -361,7 +368,7 @@ const Icon = {
       <path d="M8 16h.01" />
     </svg>
   ),
-  Factory: (p) => (
+  Factory: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -377,7 +384,7 @@ const Icon = {
       <path d="M7 18h1" />
     </svg>
   ),
-  Warehouse: (p) => (
+  Warehouse: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -392,7 +399,7 @@ const Icon = {
       <path d="M12 10v8" />
     </svg>
   ),
-  Scale: (p) => (
+  Scale: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -409,7 +416,7 @@ const Icon = {
       <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
     </svg>
   ),
-  Filter: (p) => (
+  Filter: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -422,7 +429,7 @@ const Icon = {
       <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
     </svg>
   ),
-  Link: (p) => (
+  Link: (p: SVGProps<SVGSVGElement>) => (
     <svg
       {...p}
       viewBox="0 0 24 24"
@@ -578,7 +585,7 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 .hero-bg-lines{position:absolute;inset:0;opacity:.04;pointer-events:none}
 .hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(74,183,52,.06);border:1px solid rgba(74,183,52,.18);border-radius:30px;padding:8px 20px;margin-bottom:22px;font-size:12px;color:#5ab840;font-weight:500}
 .chip-dot{width:6px;height:6px;background:#4ab734;border-radius:50%;animation:dotpulse 2s infinite}
-.hero-h{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,100px);line-height:1.0;margin-bottom:20px;display:flex;flex-direction:column;gap:4px,text-shadow:0 2px 20px rgba(0,0,0,0.8)}
+.hero-h{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,100px);line-height:1.0;margin-bottom:20px;display:flex;flex-direction:column;gap:4px;text-shadow:0 2px 20px rgba(0,0,0,0.8)}
 .gtext{background:linear-gradient(135deg,#7ed958,#4ab734,#a8e060);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-p{font-size:16px;color:#c8e0c0;max-width:580px;line-height:1.75;margin-bottom:36px}
 .hbtns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
@@ -673,7 +680,7 @@ nav{position:sticky;top:0;z-index:400;height:62px;display:flex;align-items:cente
 @keyframes toastIn{from{opacity:0;transform:translateX(60px) scale(.9)}to{opacity:1;transform:translateX(0) scale(1)}}
 .toast-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 footer{border-top:1px solid rgba(74,183,52,.05);padding:30px 28px;text-align:center;position:relative;z-index:5}
-footer{border-top:1px solid rgba(74,183,52,.07);padding:48px 28px 24px;position:relative;z-index:5}
+
 .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 36px}
 .foot-brand{}
 .foot-logo{display:flex;align-items:center;gap:9px;margin-bottom:12px}
@@ -683,7 +690,7 @@ footer{border-top:1px solid rgba(74,183,52,.07);padding:48px 28px 24px;position:
 .foot-col-title{font-size:11px;color:#7ed958;font-weight:600;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
 .foot-links{display:flex;flex-direction:column;gap:9px}
 .foot-link{font-size:13px;color:#5a7a50;cursor:pointer;transition:color .2s;width:fit-content}
-.foot-link:hover{color:#5a7a50}
+.foot-link:hover{color:#a8d490}
 .foot-contact{display:flex;flex-direction:column;gap:9px}
 .foot-contact-item{font-size:12px;color:#5a7a50;display:flex;align-items:center;gap:7px}
 .foot-bottom{border-top:1px solid rgba(74,183,52,.2);padding-top:20px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
@@ -700,6 +707,8 @@ const LIVE_EVENTS = [
   ["Governance vote cast by 0x8C4...D2e", "🗳"],
 ];
 
+type Toast = { id: number; msg: string; emoji: string; color: string };
+
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
@@ -709,18 +718,18 @@ export default function App() {
   const [appVisible, setAppVisible] = useState(false);
   const [view, setView] = useState("home");
   const [agtVal, setAgtVal] = useState(248);
-  const [toasts, setToasts] = useState([]);
-  const [openFaq, setOpenFaq] = useState(null);
+  const [toasts, setToasts] = useState<Toast[]>([]);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeRole, setActiveRole] = useState(0);
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const canvasRef = useRef(null);
-  const dotRef = useRef(null);
-  const ringRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
   const toastIdRef = useRef(0);
   const evIdxRef = useRef(0);
 
-  const toast = useCallback((msg, emoji, color) => {
+  const toast = useCallback((msg: string, emoji: string, color?: string) => {
     const id = ++toastIdRef.current;
     setToasts((prev) => [
       ...prev,
@@ -741,8 +750,8 @@ export default function App() {
       my = window.innerHeight / 2;
     let rx = mx,
       ry = my,
-      rafId;
-    const onMove = (e) => {
+      rafId: number;
+    const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
     };
@@ -767,6 +776,7 @@ export default function App() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
+    if (!ctx) return;
     let W = (canvas.width = window.innerWidth);
     let H = (canvas.height = window.innerHeight);
     let mx = W / 2,
@@ -775,53 +785,59 @@ export default function App() {
       W = canvas.width = window.innerWidth;
       H = canvas.height = window.innerHeight;
     };
-    const onMove = (e) => {
+    const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
     };
     window.addEventListener("resize", onResize);
     document.addEventListener("mousemove", onMove);
-    function Pt() {
-      this.x = Math.random() * W;
-      this.y = Math.random() * H;
-      this.vx = (Math.random() - 0.5) * 0.4;
-      this.vy = (Math.random() - 0.5) * 0.4;
-      this.r = Math.random() * 1.5 + 0.5;
-      this.opacity = Math.random() * 0.4 + 0.1;
-    }
-    Pt.prototype.update = function () {
-      this.x += this.vx;
-      this.y += this.vy;
-      var dx = mx - this.x,
-        dy = my - this.y,
-        d = Math.sqrt(dx * dx + dy * dy);
-      if (d < 150) {
-        this.vx -= (dx / d) * 0.02;
-        this.vy -= (dy / d) * 0.02;
+    class Pt {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      r: number;
+      opacity: number;
+      constructor() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.r = Math.random() * 1.5 + 0.5;
+        this.opacity = Math.random() * 0.4 + 0.1;
       }
-      if (this.x < 0 || this.x > W) this.vx *= -1;
-      if (this.y < 0 || this.y > H) this.vy *= -1;
-    };
-    Pt.prototype.draw = function () {
-      ctx.save();
-      ctx.globalAlpha = this.opacity;
-      ctx.fillStyle = "#4ab734";
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.restore();
-    };
-    var pts = Array.from({ length: 70 }, function () {
-      return new Pt();
-    });
-    var rafId;
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        var dx = mx - this.x,
+          dy = my - this.y,
+          d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 150) {
+          this.vx -= (dx / d) * 0.02;
+          this.vy -= (dy / d) * 0.02;
+        }
+        if (this.x < 0 || this.x > W) this.vx *= -1;
+        if (this.y < 0 || this.y > H) this.vy *= -1;
+      }
+      draw() {
+        ctx!.save();
+        ctx!.globalAlpha = this.opacity;
+        ctx!.fillStyle = "#4ab734";
+        ctx!.beginPath();
+        ctx!.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx!.fill();
+        ctx!.restore();
+      }
+    }
+    var pts = Array.from({ length: 70 }, () => new Pt());
+    var rafId: number;
     var frame = function () {
-      ctx.clearRect(0, 0, W, H);
-      var gr = ctx.createRadialGradient(mx, my, 0, mx, my, 220);
+      ctx!.clearRect(0, 0, W, H);
+      var gr = ctx!.createRadialGradient(mx, my, 0, mx, my, 220);
       gr.addColorStop(0, "rgba(74,183,52,0.04)");
       gr.addColorStop(1, "rgba(74,183,52,0)");
-      ctx.fillStyle = gr;
-      ctx.fillRect(0, 0, W, H);
+      ctx!.fillStyle = gr;
+      ctx!.fillRect(0, 0, W, H);
       for (var i = 0; i < pts.length; i++) {
         pts[i].update();
         pts[i].draw();
@@ -830,15 +846,15 @@ export default function App() {
             dy = pts[i].y - pts[j].y,
             d = Math.sqrt(dx * dx + dy * dy);
           if (d < 110) {
-            ctx.save();
-            ctx.globalAlpha = (1 - d / 110) * 0.07;
-            ctx.strokeStyle = "#4ab734";
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            ctx.moveTo(pts[i].x, pts[i].y);
-            ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.stroke();
-            ctx.restore();
+            ctx!.save();
+            ctx!.globalAlpha = (1 - d / 110) * 0.07;
+            ctx!.strokeStyle = "#4ab734";
+            ctx!.lineWidth = 0.5;
+            ctx!.beginPath();
+            ctx!.moveTo(pts[i].x, pts[i].y);
+            ctx!.lineTo(pts[j].x, pts[j].y);
+            ctx!.stroke();
+            ctx!.restore();
           }
         }
       }
@@ -875,10 +891,10 @@ export default function App() {
   /* nav scroll */
   useEffect(() => {
     if (!loggedIn) return;
-    var nav = document.querySelector("nav");
+    var nav = document.querySelector("nav") as HTMLElement | null;
     if (!nav) return;
     var onScroll = function () {
-      nav.style.background =
+      nav!.style.background =
         window.scrollY > 20 ? "rgba(4,10,5,0.97)" : "rgba(4,10,5,0.85)";
     };
     window.addEventListener("scroll", onScroll);
@@ -911,21 +927,21 @@ export default function App() {
       setIsSignup(false);
     }, 500);
   };
-  const showView = (v) => {
+  const showView = (v: string) => {
     setView(v);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const toggleFaq = (i) => setOpenFaq(openFaq === i ? null : i);
+  const toggleFaq = (i: number) => setOpenFaq(openFaq === i ? null : i);
 
   const VIEWS = ["home", "dashboard", "trace", "marketplace", "governance"];
-  const VLABEL = {
+  const VLABEL: Record<string, string> = {
     home: "Home",
     dashboard: "Dashboard",
     trace: "Trace Batch",
     marketplace: "Marketplace",
     governance: "Governance",
   };
-  const VICON = {
+  const VICON: Record<string, (p: SVGProps<SVGSVGElement>) => ReactElement> = {
     home: Icon.Home,
     dashboard: Icon.LayoutDashboard,
     trace: Icon.ScanLine,
@@ -1230,7 +1246,7 @@ export default function App() {
                     height: d[1],
                     top: d[2],
                     left: d[3],
-                    animationDuration: d[4],
+                    animationDuration: String(d[4]),
                   }}
                 />
               ))}
@@ -1494,8 +1510,10 @@ export default function App() {
                   [Icon.ShoppingCart, "Delivered"],
                   [Icon.Coins, "Payment"],
                 ].map(function (item, i, arr) {
-                  var Ico = item[0];
-                  var lbl = item[1];
+                  var Ico = item[0] as (
+                    p: SVGProps<SVGSVGElement>,
+                  ) => ReactElement;
+                  var lbl = item[1] as string;
                   return (
                     <div
                       key={lbl}
@@ -2894,7 +2912,7 @@ export default function App() {
                     />
                     agrihash@gmail.com
                   </div>
-                 
+
                   <div className="foot-contact-item">
                     <Icon.Leaf
                       width="12"
@@ -2910,9 +2928,7 @@ export default function App() {
               <span className="foot-copy">
                 © 2026 AgriChain. All rights reserved.
               </span>
-              <span className="foot-built">
-                Secured by AgriDevs
-              </span>
+              <span className="foot-built">Secured by AgriDevs</span>
             </div>
           </footer>
         </div>
